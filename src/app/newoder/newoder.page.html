@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title><ion-icon name="cafe"></ion-icon>  Make New Order.</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ul *ngFor="let kofie of setOrder; index as kofieId">
+      <img style="border-radius: 50%;" src="..\assets\{{kofie.itemName}}" width="150px" height="150px"/><br>
+      Name:  {{kofie.name}} <br>
+       Price :R{{kofie.Price}}.00<br>
+         <ion-button color="primary"  routerLink = '/placeorder'  (click) = "Gets(kofie)" >Place your order</ion-button>
+         <!-- [routerLink] = "['/placeorder',kofie.kofieId]" -->
+        </ul>
+</ion-content>
