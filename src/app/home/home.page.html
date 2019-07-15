@@ -3,13 +3,12 @@
 <ion-header >
   <ion-toolbar color="primary">
     <ion-title>
-       <ion-icon name="cafe"></ion-icon>  BlaQ-Koffie.
+        <img style="border-radius: 50%;" src="assets\gold.png" width="100px" height="100px"/>  BlaQ-Koffie.
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-       
+<ion-content color="tertiary">
       <ion-toolbar>
         <ion-buttons slot="secondary">
           <ion-button>
@@ -26,11 +25,35 @@
             </ion-icon>
           </ion-button>
         </ion-buttons>
-        <ion-button color="primary" style="padding-right: 80px " routerLink='/newoder/:kofieId'>Place Order<ion-icon name="basket"></ion-icon></ion-button><ion-button color="primary" routerLink='/orders'><ion-icon name="eye"></ion-icon>Show Order</ion-button>
+        <ion-button color="primary" routerLink='/newoder/:kofieId'>Place Order<ion-icon name="basket"></ion-icon></ion-button><ion-button color="primary" routerLink='/orders'><ion-icon name="eye"></ion-icon>Show Order</ion-button>
       </ion-toolbar>
 
       <p>
-          <!-- <img style="border-radius: 40%;" src="assets\cup.jpg" width="700px" height="500px"/> -->
+           <!-- <img style="border-radius: 50%;" src="assets\cup.jpg" width="700px" height="500px"/>  -->
       </p>
 
+      <ion-tabs >
+        <ion-tab-bar color="primary" slot="bottom">
+          <ion-tab-button tab="schedule">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>Calendar</ion-label>
+            <ion-badge>6</ion-badge>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="speakers">
+            <ion-icon name="call"></ion-icon>
+            <ion-label>Call-Us </ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="map">
+            <ion-icon name="map"></ion-icon>
+            <ion-label>Map</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="about">
+            <ion-icon name="information-circle"></ion-icon>
+            <ion-label>About</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
 </ion-content>

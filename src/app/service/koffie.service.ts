@@ -49,10 +49,18 @@ TotalPrice: number;
     return this.CategoryList;
   }
 
-  Totalprice(Quantity){
-    this.TotalPrice = this.thePrice * Quantity;
+  // Totalprice(Quantity){
+
+  //   this.TotalPrice = this.thePrice * Quantity ;
+  //   return this.TotalPrice;
+  // }
+
+  //adding sugar prices 
+  Totalprice(Quantity, sugar){
+    this.TotalPrice = (this.thePrice + sugar) * Quantity  ;
     return this.TotalPrice;
   }
+
   
   getOrder(){
     return this.Orders;

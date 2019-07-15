@@ -35,12 +35,14 @@ export class PlaceorderPage implements OnInit {
   }
 
   Order(){
-    this.servicess.Order(this.newName,this.sugar,this.milk,this.Quantity,this.servicess.Totalprice(this.Quantity))
+    this.servicess.Order(this.newName,this.sugar,this.milk,this.Quantity,this.servicess.Totalprice(this.Quantity, this.sugar))
     //this.setOrder = this.servicess.TakeOrder(this.kofieId);
   }
 
   Totalprice(){
-    this.totalprices = this.servicess.Totalprice(this.Quantity)
+    this.totalprices = this.servicess.Totalprice(this.Quantity, this.sugar)
+
+    // this.totalprices = this.servicess.Totalprice(this.Quantity,this.sugar)
   }
 
 

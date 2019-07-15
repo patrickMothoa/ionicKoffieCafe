@@ -4,10 +4,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
 
-     <ion-card>
-        <h5> Your Order : {{Name}} </h5>
+     <ion-card color="tertiary">
+        <h5> Your Order : {{newName}} </h5>
         <ion-card-content>
             <ion-list>
                 <ion-radio-group (ionChange) = "getSuger($event)">
@@ -27,6 +27,14 @@
                   <ion-item>
                     <ion-label >3</ion-label>
                     <ion-radio   slot="start" value=3></ion-radio>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label >4</ion-label>
+                    <ion-radio   slot="start" value=4></ion-radio>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label >5</ion-label>
+                    <ion-radio   slot="start" value=5></ion-radio>
                   </ion-item>
                 </ion-radio-group>
               </ion-list><br>
@@ -50,17 +58,25 @@
                 <ion-item >
                     <ion-label>Quantity</ion-label>
                     <ion-select  (ionChange) = "getQuantity($event)">
-                      <ion-select-option value=1 >1</ion-select-option>
-                      <ion-select-option value=2 >2</ion-select-option>
-                      <ion-select-option value=3 >3</ion-select-option>
-                      <ion-select-option value=4 >4</ion-select-option>
+                      <ion-select-option value=1 >1 cup</ion-select-option>
+                      <ion-select-option value=2 >2 cups</ion-select-option>
+                      <ion-select-option value=3 >3 cups</ion-select-option>
+                      <ion-select-option value=4 >4 cups</ion-select-option>
+                      <ion-select-option value=5 >5 cups</ion-select-option>
+                      <ion-select-option value=6 >6 cups</ion-select-option>
+                      <ion-select-option value=7 >7 cups</ion-select-option>
+                      <ion-select-option value=8 >8 cups</ion-select-option>
+                      <ion-select-option value=9 >9 cups</ion-select-option>
+                      <ion-select-option value=10 >10 cups</ion-select-option>
                     </ion-select>
                   </ion-item><br>
 
                 <ion-button color="primary"  (click)="Order();Totalprice()">Order</ion-button><ion-button color="primary" routerLink='/orders'>Check-Order</ion-button>
-        </ion-card-content>
+        
+                <br>
+                  total : R{{totalprices}}
+                 
+              </ion-card-content>
       </ion-card> 
-    <p> 
-     Price each : R{{totalprices}}.00
-    </p>
+    
 </ion-content>
