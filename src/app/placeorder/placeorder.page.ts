@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { KoffieService } from '../service/koffie.service';
 import { ActivatedRoute } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-placeorder',
@@ -16,8 +17,16 @@ export class PlaceorderPage implements OnInit {
   Quantity 
   totalprices
 
-  constructor(public servicess : KoffieService, public route : ActivatedRoute ) {
+  constructor(public servicess : KoffieService, public route : ActivatedRoute, public toastController: ToastController ) {
     this.newName = this.servicess.getName();
+  }
+
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Your order processed successfully..',
+      duration: 2000
+    });
+    toast.present();
   }
 
   getSuger(event){
@@ -35,12 +44,12 @@ export class PlaceorderPage implements OnInit {
   }
 
   Order(){
-    this.servicess.Order(this.newName,this.sugar,this.milk,this.Quantity,this.servicess.Totalprice(this.Quantity, this.sugar))
+    this.servicess.Order(this.newName,this.sugar,this.milk,this.Quantity,this.servicess.Totalprice(this.Quantity))
     //this.setOrder = this.servicess.TakeOrder(this.kofieId);
   }
 
   Totalprice(){
-    this.totalprices = this.servicess.Totalprice(this.Quantity, this.sugar)
+    this.totalprices = this.servicess.Totalprice(this.Quantity)
 
     // this.totalprices = this.servicess.Totalprice(this.Quantity,this.sugar)
   }

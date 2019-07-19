@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class KoffieService {
 
-  CategoryList = [{ kofieId: 1,itemName: "latee.jpg", name: 'Latte', sugars: 2, milk: 'yes', Quantity: 0, Price: 60 },
+  CategoryList = [{ kofieId: 1,itemName: "sss.jpg", name: 'Latte', sugars: 2, milk: 'yes', Quantity: 0, Price: 60 },
   { kofieId: 2,itemName: "cuppacino.jpg",name: 'Cuppuccino', sugars: 1, milk: 'yes', Quantity: 0, Price: 90 },
-  { kofieId: 3,itemName: "expresso.png",name: 'Expresso', sugars: 2, milk: 'yes', Quantity: 0, Price: 80 },
+  { kofieId: 3,itemName: "exp.jpeg",name: 'Expresso', sugars: 2, milk: 'yes', Quantity: 0, Price: 80 },
   {kofieId: 4,itemName: "blackc.jpg",name: 'Plaincoffee', sugars: 3, milk: 'no', Quantity: 0, Price: 50 }
  ];
 
@@ -49,17 +49,17 @@ TotalPrice: number;
     return this.CategoryList;
   }
 
-  // Totalprice(Quantity){
+  Totalprice(Quantity){
 
-  //   this.TotalPrice = this.thePrice * Quantity ;
-  //   return this.TotalPrice;
-  // }
-
-  //adding sugar prices 
-  Totalprice(Quantity, sugar){
-    this.TotalPrice = (this.thePrice + sugar) * Quantity  ;
+    this.TotalPrice = this.thePrice * Quantity ;
     return this.TotalPrice;
   }
+
+  //adding sugar prices 
+  // Totalprice(Quantity, sugar){
+  //   this.TotalPrice = (this.thePrice + sugar) * Quantity  ;
+  //   return this.TotalPrice;
+  // }
 
   
   getOrder(){

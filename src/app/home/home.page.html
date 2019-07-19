@@ -3,34 +3,32 @@
 <ion-header >
   <ion-toolbar color="primary">
     <ion-title>
-        <img style="border-radius: 50%;" src="assets\gold.png" width="100px" height="100px"/>  BlaQ-Koffie.
+        <img style="border-radius: 50%;" src="assets\gold.png" width="60px" height="60px"/>  BlaQ-Koffie.
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content color="tertiary">
-      <ion-toolbar>
-        <ion-buttons slot="secondary">
-          <ion-button>
-            <ion-icon slot="icon-only" name="contact"></ion-icon>
-          </ion-button>
-          <ion-button>
-            <ion-icon slot="icon-only" name="search"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-buttons slot="primary">
-          <ion-button color="secondary">
-            <ion-icon slot="icon-only" name="more">
-              
-            </ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-button color="primary" routerLink='/newoder/:kofieId'>Place Order<ion-icon name="basket"></ion-icon></ion-button><ion-button color="primary" routerLink='/orders'><ion-icon name="eye"></ion-icon>Show Order</ion-button>
-      </ion-toolbar>
+  <p>
+    <ion-toolbar style="text-align: center" color="tertiary">
+        <ion-title>
+          <ion-button routerLink='/home' color="primary">
+              <ion-icon   slot="icon-only" name="home"></ion-icon> Home
+        </ion-button>
 
-      <p>
-           <!-- <img style="border-radius: 50%;" src="assets\cup.jpg" width="700px" height="500px"/>  -->
-      </p>
+        <ion-button routerLink='/newoder/:kofieId' color="primary">
+          <ion-icon name="basket"></ion-icon>Order
+        </ion-button>
+        <ion-button routerLink='/orders' color="primary">
+          <ion-icon name="eye"></ion-icon> Show
+        </ion-button>
+        </ion-title>
+
+    </ion-toolbar>
+
+       
+             <img style="border-radius: 20%;text-align: center;" src="assets\icon.png" width="400px" height="400px"/> 
+  
 
       <ion-tabs >
         <ion-tab-bar color="primary" slot="bottom">
@@ -55,5 +53,5 @@
             <ion-label>About</ion-label>
           </ion-tab-button>
         </ion-tab-bar>
-      </ion-tabs>
+      </ion-tabs></p>
 </ion-content>

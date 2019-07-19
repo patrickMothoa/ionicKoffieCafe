@@ -5,9 +5,23 @@
 </ion-header>
 
 <ion-content >
-
      <ion-card color="tertiary">
-        <h5> Your Order : {{newName}} </h5>
+        <ion-toolbar style="text-align: center" color="tertiary">
+            <ion-title>
+              <ion-button routerLink='/home' color="primary">
+                  <ion-icon   slot="icon-only" name="home"></ion-icon> Home
+            </ion-button>
+    
+            <ion-button routerLink='/newoder/:kofieId' color="primary">
+              <ion-icon name="basket"></ion-icon>Order
+            </ion-button>
+            <ion-button routerLink='/orders' color="primary">
+              <ion-icon name="eye"></ion-icon> Show
+            </ion-button>
+            </ion-title>
+    
+        </ion-toolbar>
+        <h5 > Your Order : {{newName}} </h5>
         <ion-card-content>
             <ion-list>
                 <ion-radio-group (ionChange) = "getSuger($event)">
@@ -70,11 +84,12 @@
                       <ion-select-option value=10 >10 cups</ion-select-option>
                     </ion-select>
                   </ion-item><br>
+                  <h2 style="float: right; color: blue">total : R{{totalprices}} </h2><br>
 
-                <ion-button color="primary"  (click)="Order();Totalprice()">Order</ion-button><ion-button color="primary" routerLink='/orders'>Check-Order</ion-button>
-        
+                <ion-button color="primary" (click)="Order();Totalprice(); presentToast()">Order</ion-button><ion-button color="primary" routerLink='/orders'>Check-Order</ion-button>
                 <br>
-                  total : R{{totalprices}}
+                <ion-progress-bar value="0.25" buffer="0.5"></ion-progress-bar>
+                  
                  
               </ion-card-content>
       </ion-card> 

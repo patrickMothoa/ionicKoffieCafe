@@ -5,9 +5,24 @@
 </ion-header>
 
 <ion-content color="tertiary">
+    <ion-toolbar style="text-align: center" color="tertiary">
+          <ion-title>
+            <ion-button routerLink='/home' color="primary">
+                <ion-icon   slot="icon-only" name="home"></ion-icon> Home
+          </ion-button>
+
+          <ion-button routerLink='/newoder/:kofieId' color="primary">
+            <ion-icon name="basket"></ion-icon>Order
+          </ion-button>
+          <ion-button routerLink='/orders' color="primary">
+            <ion-icon name="eye"></ion-icon> Show
+          </ion-button>
+          </ion-title>
+
+      </ion-toolbar>
+
   <h3 style="text-align: center;"> Customers List of Orders.</h3>
          
-
             <ion-card style="background-color: whitesmoke;">
                 <ion-card-header>
                   <ion-card-title>Order</ion-card-title>
@@ -23,11 +38,9 @@
                         Total :R{{ordering.total}}<br>
                         <br>
                         <img style="text-align: right;" src="assets\barcode.jpg" width="100px" height="50px"/>
-                        <!-- Number of items : <ion-button (click)="DecQua(ordering)" > <ion-icon name="remove-circle"></ion-icon></ion-button><ion-input (ionChange)="getQuantity($event)" (ionChange)="TotalPrice(ordering)" ><ion-button (click)="incQua(ordering)" > <ion-icon name="add-circle"></ion-icon> </ion-button> -->
-                         <!-- {{newPrice}} -->
-                        <!-- <h2 style="background-color:grey">Total : R{{newQuantity}}</h2> --> 
                       </ul>
                 </ion-card-content>
               </ion-card>
               <ion-button color="primary" style="padding-right: 80px " routerLink='/home'><ion-icon name="arrow-dropleft-circle"></ion-icon></ion-button>
-</ion-content>
+              
+  </ion-content>
